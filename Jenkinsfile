@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    DOCKER_HUB_USER = 'ramanijadala'       
+    DOCKER_HUB_USER = 'kalyan3546'       
     IMAGE_BASE = 'todo-app'
     IMAGE_TAG = "build-${BUILD_NUMBER}"
     LOCAL_IMAGE = "${IMAGE_BASE}:${IMAGE_TAG}"
@@ -120,7 +120,7 @@ stage('eks deploy'){
     emailext (
                subject: "${env.JOB_NAME} - Build #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
                body: "Build details: ${env.BUILD_URL}",
-                to: 'mindcircuit2025@gmail.com',
+                to: 'bathinikalyan3546@gmail.com',
                 from: 'jenkins@example.com',
                 replyTo: 'jenkins@example.com',
                 
